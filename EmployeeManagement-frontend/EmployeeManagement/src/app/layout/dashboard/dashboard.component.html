@@ -1,0 +1,107 @@
+<div class="container-fluid p-4 bg-light  min-vh-100 rounded-4">
+
+  <!-- Heading -->
+  <div class="mb-4">
+    <h2 class="fw-bold">Welcome, Admin</h2>
+    <p class="text-muted">Here's what's happening with your team</p>
+  </div>
+
+  <!-- Cards -->
+  <div class="row g-4">
+
+    <!-- Total Employees -->
+    <div class="col-md-3">
+      <div class="card border-0 shadow rounded-4">
+        <div class="card-body">
+
+          <h6 class="text-muted">Total Employees</h6>
+
+          <h2 class="fw-bold">
+            {{totalEmployees}}
+          </h2>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Departments -->
+    <div class="col-md-3">
+      <div class="card border-0 shadow rounded-4">
+        <div class="card-body">
+
+          <h6 class="text-muted">Departments</h6>
+
+          <h2 class="fw-bold">
+            5
+          </h2>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Active Employees -->
+    <div class="col-md-3">
+      <div class="card border-0 shadow rounded-4">
+        <div class="card-body">
+
+          <h6 class="text-muted">Active Employees</h6>
+
+          <h2 class="fw-bold">
+            {{totalEmployees}}
+          </h2>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Recent Joiners -->
+    <div class="col-md-3">
+      <div class="card border-0 shadow rounded-4">
+        <div class="card-body">
+
+          <h6 class="text-muted">Recent Joiners</h6>
+
+          <h2 class="fw-bold">
+            0
+          </h2>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Quick Actions -->
+  <div class="row mt-5">
+
+    <div class="col-md-6">
+      <div class="card border-0 shadow rounded-4">
+
+        <div class="card-body">
+
+          <h5 class="fw-bold mb-3">
+            Quick Actions
+          </h5>
+
+          <div class="d-grid gap-3">
+
+            <button class="btn btn-dark">
+              <a routerLink="/add-employee" class="nav-link text-white ">Add Employee</a>
+            </button>
+
+            <button class="btn btn-outline-dark">
+              <a routerLink="/employees" class="nav-link  ">Employees</a>
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+   
+
+  </div>
+<router-outlet></router-outlet>
+</div>

@@ -1,0 +1,32 @@
+package com.example.EmployeeManagement.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.EmployeeManagement.Entity.Employee;
+import com.example.EmployeeManagement.repository.EmployeeRepository;
+@RestController
+@CrossOrigin
+public class EmployeeController {
+	
+	@Autowired
+	private EmployeeRepository repo;
+	
+	@PostMapping("/api/Emp")
+	public Employee CreateEmployee(@RequestBody Employee emp ) {
+		 repo.save(emp);
+		 return emp;
+		 }
+	
+	public String helloworld(String helloworld) {
+		return helloworld ;
+	}
+	
+	
+	
+
+}

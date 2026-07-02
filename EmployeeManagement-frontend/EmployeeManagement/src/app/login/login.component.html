@@ -1,0 +1,49 @@
+<div class="container mt-5 d-flex justify-content-center ">
+<div class="card shadow w-50 mt-5 ">
+<div class="text-center pt-4">
+  <h4>EMS ADMIN LOGIN
+</h4> 
+</div>
+<div class="card-body d-flex justify-content-center">
+<form (ngSubmit)="loginButton()">
+    <div class="form-group">
+<div class="row">
+    <div class="col-12 mb-3">
+<label class="form-label" for="username">Username</label>    
+<input type="text" class="form-control" [(ngModel)]="loginInfo.UserName" placeholder="Enter the username " id="username" name="username">
+
+    </div>
+<div class="col-12">
+<label class="form-label" for="password">Password</label>
+<input type="password" class="form-control" [(ngModel)]="loginInfo.Password" placeholder="Enter the password" id="password" name="password">
+        </div>
+
+        
+</div>
+<div class="d-flex justify-content-center">
+    <button type="submit" class="btn btn-primary mt-3 pb-2">Login</button>
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+</form>
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+</div>

@@ -1,0 +1,132 @@
+<div class="container mt-3">
+<div class="table-responsive">
+    <table class="table table-hover ">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Age</th>
+                <th scope="col">EmailId</th>
+                <th scope="col">Department</th>
+                <th scope="col">Role</th>
+                <th scope="col">Salary</th>
+                <th scope="col">Joined Date</th>
+                <th scope="col">edit/del</th>
+            </tr>
+        </thead>
+<tbody>
+<tr *ngFor="let emp of EmployeeList;let i = index">
+    <td>{{emp.id}}</td>
+    <td>{{emp.employeeName}}</td>
+    <td>{{emp.employeeAge}}</td>
+    <td>{{emp.emailId}}</td>
+    <td>{{emp.department}}</td>
+    <td>{{emp.role}}</td>
+    <td>{{emp.salary}}</td>
+    <td>{{emp.joiningDate}}</td>
+    <td><button class="btn btn-primary mx-2" type="button"  (click)="edit(emp)" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>
+        <button class="btn btn-danger" (click)="delete(emp.id)" >Delete</button>
+    </td>
+</tr>
+
+</tbody>
+
+ </table>
+ </div>
+
+ 
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Update Employee</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+<form>
+
+         <div class="row">
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Employee Name</label>
+            <input type="text"  [(ngModel)]="selectedEmp.employeeName"
+                   class="form-control"
+                   name="employeeName"
+                   required>
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label class="form-label" for="age">Age</label>
+            <input type="number"  [(ngModel)]="selectedEmp.employeeAge"
+                   class="form-control" id="age" name="employeeAge"
+                   required>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="email">Email</label>
+          <input type="email"  [(ngModel)]="selectedEmp.emailId"
+                 class="form-control" id="email"
+                 
+                 name="emailId"
+                 required>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label class="form-label" for="department">Department</label>
+            <input type="text"  [(ngModel)]="selectedEmp.department"
+                   class="form-control" id="department"
+                  
+                   name="department">
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label class="form-label" for="role" >Role</label>
+            <input type="text" id="role"  [(ngModel)]="selectedEmp.role"
+                   class="form-control"
+                  
+                   name="role">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label class="form-label" for="salary">Salary</label>
+            <input type="number" id="salary"  [(ngModel)]="selectedEmp.salary"
+                   class="form-control"
+                   
+                   name="salary">
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label class="form-label" for="date">Joining Date</label>
+            <input type="date" id="date"  [(ngModel)]="selectedEmp.joiningDate"
+                   class="form-control"
+                  
+                   name="joiningDate">
+          </div>
+        </div>
+
+       
+</form>
+    
+
+
+
+      </div>
+      <div class="modal-footer">
+        
+         <button type="button" (click)="update()" class="btn btn-success">Update</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+
+
