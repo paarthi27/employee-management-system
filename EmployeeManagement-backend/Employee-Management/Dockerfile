@@ -1,8 +1,8 @@
 # Use Maven to build the application
 FROM maven:3.9.6-eclipse-temurin-17 AS build
 WORKDIR /app
-COPY pom.xml .
-COPY src ./src
+COPY EmployeeManagement-backend/Employee-Management/pom.xml .
+COPY EmployeeManagement-backend/Employee-Management/src ./src
 RUN mvn -B clean package -DskipTests
 
 # Use a lightweight JDK runtime image
