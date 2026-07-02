@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: employee-management-backend
+    env: docker
+    dockerfilePath: ./EmployeeManagement-backend/Employee-Management/Dockerfile
+    autoDeploy: true
+    envVars:
+      - key: DB_URL
+        # Set this in Render dashboard
+      - key: DB_USERNAME
+        # Set this in Render dashboard
+      - key: DB_PASSWORD
+        # Set this in Render dashboard
+      - key: SERVER_PORT
+        value: "8082"
