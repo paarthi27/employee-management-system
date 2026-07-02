@@ -26,7 +26,7 @@ Password  :'',
 loginButton(){
 console.log(this.loginInfo);
 
-  if(this.loginInfo.UserName === 'admin' && this.loginInfo.Password === 'password'){
+  if(this.loginInfo.UserName === 'Admin' && this.loginInfo.Password === 'password'){
 
     alert("login successful");
 

@@ -1,5 +1,28 @@
-.card{
-    border-radius: 10px;
-    height: 320px;
+.card {
+  border-radius: 12px;
+  max-width: 380px;
+  width: 100%;
+  margin: 0 auto;
+  height: auto;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
 
+/* Mobile tweaks */
+@media (max-width: 480px) {
+  .card {
+    padding: 1.5rem 1rem;
+    max-width: 100%;
+  }
+  .card h4 {
+    font-size: 1.25rem;
+  }
+  .form-control {
+    font-size: 0.95rem;
+  }
+  .btn {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.6rem;
+  }
 }
